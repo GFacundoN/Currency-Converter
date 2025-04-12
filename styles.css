@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #00F068;
+  }
+  
+  /* Fuente personalizada */
+  @font-face {
+    font-family: 'PPNeueMachina-Ultrabold';
+    src: url('fonts/PPNeueMachina-Ultrabold.woff2') format('woff2'),
+         url('fonts/PPNeueMachina-Ultrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo principal del contenido */
+  main {
+    font-family: PPNeueMachina-Ultrabold, sans-serif;
+    background-image: url(https://framerusercontent.com/images/o4c5WxB83uMuL9HDzZhOVTZczKA.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .btn {
+    font-family: PPNeueMachina-Ultrabold, sans-serif;
+    background: var(--primary-color);
+    color: black;
+    font-size: 14px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+  }
+  
+  .conversor-imagen {
+    width: 150px;
+  }
+  
+  .moneda {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .moneda select {
+    font-family: PPNeueMachina-Ultrabold, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px 10px 10px;
+    border: 1px solid #dedede;
+    border-radius: 24px 0 0 24px;
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  .moneda input {
+    font-family: PPNeueMachina-Ultrabold, sans-serif;
+    font-size: 30px;
+    text-align: right;
+    border: 0;
+    border-radius: 0 24px 24px 0;
+  }
+  
+  .taza-cambio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .cambio {
+    color: var(--primary-color);
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: 600;
+  }
+  
+  /* Eliminar contornos al enfocar */
+  select:focus,
+  input:focus,
+  button:focus {
+    outline: 0;
+  }
+  
+  /* Switch de fondo */
+  .switch {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    width: 3rem;
+    height: 1.5rem;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 9999px;
+    background-color: rgba(100, 116, 139, 0.377);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .switch:checked {
+    background-color: var(--primary-color);
+  }
+  
+  .switch::before {
+    content: "";
+    position: absolute;
+    left: calc(1.5rem - 1.6rem);
+    top: calc(1.5rem - 1.6rem);
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: white;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .switch:hover::before {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .switch:checked:hover::before {
+    box-shadow: 0 0 0 8px rgba(236, 72, 153, 0.15);
+  }
+  
+  .switch:checked::before {
+    transform: translateX(100%);
+    border-color: rgba(236, 72, 153, 1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .moneda input {
+      width: 200px;
+    }
+  }
+  
