@@ -119,7 +119,7 @@
   }
   
   .switch:checked {
-    background-color: var(--primary-color);
+    background-color: #3161B0;
   }
   
   .switch::before {
